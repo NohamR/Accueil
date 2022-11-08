@@ -2,7 +2,11 @@ html {
     color: aliceblue;
     --highlight-color: rgba(0, 0, 0, 0);
     /* filter: drop-shadow(0px 0px 25px rgb(63, 135, 61)); */
-    background-image: url(../assets/background/img1.jpg);
+    /* background-image: url(../assets/background/img1.jpg); */
+    /* background-image: url(../assets/background/img1/1%.jpg); */
+    /* background-color: rgb(2, 21, 83); */
+    /* background-image: url(../assets/background/img1/1x1.jpg); */
+    background-image: url(../assets/background/img1/1x50.jpg);
     background-size: cover;
 }
 
