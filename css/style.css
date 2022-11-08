@@ -1,0 +1,137 @@
+html {
+    color: aliceblue;
+    --highlight-color: rgba(0, 0, 0, 0);
+    /* filter: drop-shadow(0px 0px 25px rgb(63, 135, 61)); */
+    background-image: url(../assets/background/img1.jpg);
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
+
+button {
+    display: inline-block;
+}
+
+iframe {
+    width: 50%
+}
+
+#notion>#notion-content {
+    width: 140px;
+    height: 180px;
+    border: 3px solid rgba(204, 204, 204, 0.425);
+    border-radius: 30px;
+    padding: none;
+    transition: width 1.5s, height 1.5s;
+    transition-delay: 0.5s;
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+
+#notion>#notion-content:hover {
+    width: 1000px;
+    height: 500px;
+}
+
+#notion:hover~#reseau {
+    background-color: aliceblue;
+}
+
+#reseaux-content {
+    border: 3px solid rgba(204, 204, 204, 0.425);
+    border-radius: 30px;
+    padding: none;
+    width: 420px;
+    height: 350px;
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+#cours-content {
+    border: 3px solid rgba(204, 204, 204, 0.425);
+    border-radius: 30px;
+    padding: none;
+    width: 420px;
+    height: 500px;
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+#weather-content {
+    border: 3px solid rgba(204, 204, 204, 0.425);
+    border-radius: 30px;
+    padding: none;
+    width: 400px;
+    height: 420px;
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+#raccourcis-content {
+    border: 3px solid rgba(204, 204, 204, 0.425);
+    border-radius: 30px;
+    padding: none;
+    width: 420px;
+    height: 500px;
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+#reload {
+    background-color: transparent;
+    filter: invert(1);
+    border: 0px;
+    cursor: pointer;
+    /* opacity: 0.75; */
+}
+
+#google {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+.button {
+    text-align: center;
+}
+
+/* #heure {
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    padding: none;
+} */
+
+#heure {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 20px;
+}
+
+#contenu {
+    display: flex;
+
+}
+
+#notion, #reseaux, #cours, #weather, #raccourcis{
+    margin: 50px;
+}
+
+#raccourcis {
+    padding-right: 50px;
+}
+
+/* disparition des autres élements quand notion:hover */
+#notion:hover~#reseaux,
+#notion:hover~#cours,
+#notion:hover~#weather,
+#notion:hover~#raccourcis {
+    display: none;
+}
