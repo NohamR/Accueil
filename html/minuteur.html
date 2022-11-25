@@ -1,0 +1,92 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/js.js"></script>
+	<link rel="stylesheet" href="../css/minuteur.css">
+	<link rel="shortcut icon" href="../assets/timer.ico" type="image/x-icon">
+	<title> Minuteur</title>
+</head>
+
+<body>
+
+	<div class="content">
+		<div class="minuteur">
+			<button id="start_timer10" type="button">Start</button>
+		</div>
+		
+		<br>
+
+		<div class="slider">
+			<div id="glissière" onclick="taille()" class="col">
+				<input id="entree" type="range" oninput="taille()" min="50" max="700" class="slider">
+			</div>
+		</div>
+
+		<br>
+
+		<div class="minuteur">
+			<span id="countdown10"></span>
+		</div>
+		<script src="../js/minuteur10.js"></script>
+	</div>
+
+
+	<!-- <div class="ligne2">
+		<div id="glissière" onclick="glissiere()" class="col">
+			<input id="entree" type="range" oninput="glissiere()" min="50" max="500" class="slider">
+			<br>
+			<p id="texte5"></p><br>
+			<p id="texte3">Teste</p><br>
+			
+
+		</div>
+	</div> -->
+
+
+
+
+
+	<div class="heure">
+		<script language="JavaScript">
+			Stamp = new Date();
+			year = Stamp.getYear();
+			if (year < 2000) year = 1900 + year;
+
+			// document.write('<font size="5" ><B>' + Stamp.getDate() + "/" + (Stamp.getMonth() + 1) + "/" + year + '</B></font><BR>');
+			var Hours;
+			var Mins;
+			var Time;
+			Hours = Stamp.getHours();
+			if (Hours >= 12) {
+				Time = " ";
+			}
+			else {
+				Time = " ";
+			}
+			if (Hours > 24) {
+				Hours -= 24;
+			}
+			if (Hours == 0) {
+				Hours = 12;
+			}
+			Mins = Stamp.getMinutes();
+			if (Mins < 10) {
+				Mins = "0" + Mins;
+			}
+			document.write('<h1>' + "Commencé à " + Hours + ":" + Mins + Time + '</h1>');
+            // document.write('<font size="10" ><B>' + Hours + ":" + Mins + Time + '</B></font>');
+		</script>
+		<h1></h1>
+
+
+	</div>
+
+	<footer>
+		Dev by √(noham)² with ❤
+	</footer>
+
+
+</body>
+
+</html>
