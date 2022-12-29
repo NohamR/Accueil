@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="shortcut icon" href="assets/icon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+    <script>var body = document.getElementsByTagName('body')[0];
+        images = ['img1.jpg','img2.jpg','img3.jpg'];
+        i = Math.floor(Math.random()*images.length);
+        body.style.backgroundImage = 'url(' + images[i] + ')';
+        body.style.backgroundSize = 'cover';</script>
+</head>
+
+<body>
+    <div id="contenu">
+        <div id="notion">
+            <iframe id="notion-content" src="html/notion.html" frameborder="0" height="400px" width="400px"></iframe>
+        </div>
+        <div id="reseaux">
+            <iframe id="reseaux-content" src="html/réseaux.html" frameborder="0"></iframe>
+        </div>
+         <div id="cours">
+            <iframe id="cours-content" src="html/cours.html" frameborder="0"></iframe>
+        </div>
+        <div id="weather">
+            <iframe id="weather-content" src="weather/weather.html" frameborder="0"></iframe>
+        </div>
+        <div id="raccourcis">
+            <iframe id="raccourcis-content" src="html/raccourcis.html" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div id="heure">
+        <SCRIPT LANGUAGE="JavaScript">
+            Stamp = new Date();
+            year = Stamp.getYear();
+            if (year < 2000) year = 1900 + year;
+            document.write('<h1>' + Stamp.getDate() + "/" + (Stamp.getMonth() + 1) + "/" + year + '</h1>');
+            // document.write('<font size="5" ><B>' + Stamp.getDate() + "/" + (Stamp.getMonth() + 1) + "/" + year + '</B></font><BR>');
+            var Hours;
+            var Mins;
+            var Time;
+            Hours = Stamp.getHours();
+            if (Hours >= 12) {
+                Time = " ";
+            }
+            else {
+                Time = " ";
+            }
+            if (Hours > 24) {
+                Hours -= 24;
+            }
+            if (Hours == 0) {
+                Hours = 12;
+            }
+            Mins = Stamp.getMinutes();
+            if (Mins < 10) {
+                Mins = "0" + Mins;
+            }
+            document.write('<h1>' + Hours + ":" + Mins + Time + '</h1>');
+            // document.write('<font size="10" ><B>' + Hours + ":" + Mins + Time + '</B></font>');
+        </SCRIPT>
+
+        <SCRIPT LANGUAGE="JavaScript">
+           Stamp = new Date();
+            day = Stamp.getDay();
+            if (day == 1) {
+                jour = 'Lundi';
+            }
+            if (day == 2) {
+                jour = 'Mardi';
+            }
+            if (day == 3) {
+                jour = 'Mercredi';
+            }
+            if (day == 4) {
+                jour = 'Jeudi';
+            }
+            if (day == 5) {
+                jour = 'Vendredi';
+            }
+            if (day == 6) {
+                jour = 'Samedi';
+            }
+            if (day == 7) {
+                jour = 'Dimanche';
+            }
+
+            // document.write('<h1>' + Stamp.getDay() + '</h1>');
+            document.write('<h1>' + jour + '</h1>');
+        </script>
+        
+    </div>
+
+    <div class="button">
+        <div>
+            <button id="reload" onClick="window.location.reload();"><img src="assets/social/reload.png" alt="reload"
+                    style="width:75px"></button>
+            <!-- <img id="reload" src="assets/social/reload.png" alt="reload" onClick="window.location.reload"> -->
+        </div>
+        <br>
+        <div>
+            <button id="google" onmouseenter='window.location.href="https://google.com"'><img
+                    src="assets/social/google.png" alt="reload" style="width: 75px"></button>
+        </div>
+    </div>
+</body>
+
+</html>
